@@ -11,9 +11,13 @@ part 'sign_in_form_state.dart';
 
 class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
   final IAuthFacade _authFacade;
-  SignInFormBloc(this._authFacade) : super(null as SignInFormState);
 
   SignInFormState get initialState => SignInFormState.initialState();
+
+  SignInFormBloc(this._authFacade)
+      : super(
+          SignInFormState.initialState(),
+        );
 
   Stream<SignInFormState> mapEvenToState(SignInFormEvent event) async* {
     yield* event.map(
@@ -23,8 +27,12 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
       passwordChanged: (e) async* {
         yield state.copyWith(password: Password(e.password));
       },
-      registerWithEaPPress: (e) async* {},
-      signInWithEaPPress: (e) async* {},
+      registerWithEaPPress: (e) async* {
+        yield* _doActionOnAuthFacade(_authFacade.registerWithEaP);
+      },
+      signInWithEaPPress: (_SignInWithEaPPress value) async* {
+        yield* _doActionOnAuthFacade(_authFacade.signInWithEaP);
+      },
       signInWithGooglePress: (e) async* {
         yield state.copyWith(
           isSubmiting: true,
@@ -36,6 +44,34 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
           authFailureorSuccess: some(failureorSuccess),
         );
       },
+    );
+  }
+
+  Stream<SignInFormState> _doActionOnAuthFacade(
+    Future<Either<AuthFailure, Unit>> Function({
+      required EmailAddress email,
+      required Password password,
+    })
+        detection,
+  ) async* {
+    Either<AuthFailure, Unit>? failureorSuccess;
+    final isEmailValid = state.email.isVaid();
+    final isPassword = state.password.isVaid();
+    if (isEmailValid && isPassword) {
+      yield state.copyWith(
+        isSubmiting: true,
+        authFailureorSuccess: none(),
+      );
+      failureorSuccess = await detection(
+        email: state.email,
+        password: state.password,
+      );
+    }
+
+    yield state.copyWith(
+      showErrorMessage: true,
+      isSubmiting: false,
+      authFailureorSuccess: optionOf(failureorSuccess),
     );
   }
 }

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "751065553631",
+    "project_id": "timeoffproject-ef60b",
+    "storage_bucket": "timeoffproject-ef60b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751065553631:android:ac84e7f0c7c20583efe76a",
+        "android_client_info": {
+          "package_name": "com.example.odoo_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751065553631-fkn1t2cmfjeic10vr66el14d4m9ll9ua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxMRSIyX-tkOhoMPFQlTroRwOWQ6tnuig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751065553631-fkn1t2cmfjeic10vr66el14d4m9ll9ua.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "751065553631-rnbbo738dep3eis3u598g06mjpjjlfir.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.odooProject"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
