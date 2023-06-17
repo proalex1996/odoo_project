@@ -1,5 +1,8 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:odoo_project/common/resource/assets_manager.dart';
+import 'package:odoo_project/common/resource/values_manager.dart';
+import 'package:odoo_project/helper/double_helper.dart';
 
 class LoginView extends StatelessWidget {
   LoginView({super.key});
@@ -15,20 +18,23 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Sign In')),
       body: Container(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(AppPadding.p16.getSize(context)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SvgPicture.asset(ImageAssets.logo),
+            SizedBox(height: AppSize.s16.getSize(context)),
             TextField(
               controller: _emailController,
-              decoration: const InputDecoration(
-                labelText: 'Email',
-                prefixIcon: Icon(Icons.email),
-              ),
+              decoration: (const InputDecoration())
+                  .applyDefaults(Theme.of(context).inputDecorationTheme)
+                  .copyWith(
+                    labelText: 'Email',
+                    prefixIcon: const Icon(Icons.mail),
+                  ),
             ),
-            const SizedBox(height: 16.0),
+            SizedBox(height: AppSize.s16.getSize(context)),
             TextField(
               controller: _passwordController,
               decoration: const InputDecoration(
@@ -37,12 +43,15 @@ class LoginView extends StatelessWidget {
               ),
               obscureText: true,
             ),
-            const SizedBox(height: 16.0),
+            SizedBox(height: AppSize.s16.getSize(context)),
             ElevatedButton(
               onPressed: _signIn,
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
-              child: const Text('Sign In'),
+              style: Theme.of(context).elevatedButtonTheme.style,
+              child: const Text(
+                'Sign In',
+              ),
             ),
+            SizedBox(height: AppSize.s30.getSize(context)),
           ],
         ),
       ),

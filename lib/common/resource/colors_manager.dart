@@ -1,7 +1,7 @@
 import 'package:flutter/painting.dart';
 
 class ColorsManager {
-  static Color colorPrimary = const Color(0xFF802A69);
+  static Color colorPrimary = const Color(0xFFAD659A);
   static Color colorFAFAFA = const Color(0xFFFAFAFA);
   static Color colorFFFFFF = const Color(0xFFFFFFFF);
   static Color color8E8E93 = const Color(0xff8E8E93);
