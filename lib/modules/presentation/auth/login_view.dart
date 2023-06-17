@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:odoo_project/common/resource/assets_manager.dart';
+import 'package:odoo_project/common/resource/colors_manager.dart';
 import 'package:odoo_project/common/resource/values_manager.dart';
 import 'package:odoo_project/helper/double_helper.dart';
 
@@ -30,16 +31,20 @@ class LoginView extends StatelessWidget {
               decoration: (const InputDecoration())
                   .applyDefaults(Theme.of(context).inputDecorationTheme)
                   .copyWith(
-                    labelText: 'Email',
-                    prefixIcon: const Icon(Icons.mail),
+                    label: Icon(
+                      Icons.mail,
+                      color: ColorsManager.color8E8E93,
+                    ),
                   ),
             ),
             SizedBox(height: AppSize.s16.getSize(context)),
             TextField(
               controller: _passwordController,
-              decoration: const InputDecoration(
-                labelText: 'Password',
-                prefixIcon: Icon(Icons.lock),
+              decoration: InputDecoration(
+                label: Icon(
+                  Icons.lock,
+                  color: ColorsManager.color8E8E93,
+                ),
               ),
               obscureText: true,
             ),

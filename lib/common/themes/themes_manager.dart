@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:odoo_project/common/resource/colors_manager.dart';
+import 'package:odoo_project/common/resource/values_manager.dart';
 
 class Themes {
   static Color _getBackgroundColor(Set<MaterialState> states) {
@@ -31,7 +32,8 @@ class Themes {
     fontFamily: 'OpenSans',
     visualDensity: VisualDensity.adaptivePlatformDensity,
     buttonTheme: ButtonThemeData(
-      height: 42,
+      height: AppSize.s42,
+      minWidth: AppSize.s60,
       buttonColor: ColorsManager.colorPrimary,
     ),
     textTheme: TextTheme(
@@ -39,7 +41,9 @@ class Themes {
     ),
     inputDecorationTheme: InputDecorationTheme(
       focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: ColorsManager.colorPrimary),
+        borderSide: BorderSide(
+          color: ColorsManager.colorPrimary,
+        ),
       ),
       border: const OutlineInputBorder(
         borderSide: BorderSide(),
