@@ -3,9 +3,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:odoo_project/common/resource/values_manager.dart';
-import 'package:odoo_project/modules/auth/presentation/login_view.dart';
-import 'package:odoo_project/modules/home/presentation/home_view.dart';
-import 'package:odoo_project/modules/init/presentation/init_view.dart';
+import 'package:odoo_project/modules/presentation/auth/login_view.dart';
+import 'package:odoo_project/modules/presentation/home/presentation/home_view.dart';
+import 'package:odoo_project/modules/presentation/init/presentation/init_view.dart';
 
 part 'router_path.dart';
 
@@ -27,7 +27,7 @@ class RouteBuilder {
           case RouterPath.init:
             return const InitView();
           case RouterPath.login:
-            return const LoginView();
+            return LoginView();
           default:
             return unDefinedRoute();
         }

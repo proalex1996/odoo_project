@@ -39,6 +39,7 @@ dependencies:
   dartz:
   freezed:
   freezed_annotation:
+  flutter_bloc:
 
 dev_dependencies:
   build_runner:
