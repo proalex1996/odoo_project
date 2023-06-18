@@ -37,7 +37,6 @@ dependencies:
   get_it:
   flutter_svg:
   dartz:
-  freezed:
   freezed_annotation:
   flutter_bloc:
   firebase_auth:
@@ -47,6 +46,8 @@ dependencies:
 
 dev_dependencies:
   build_runner:
+  freezed:
+  lint:
   flutter_test:
     sdk: flutter
 

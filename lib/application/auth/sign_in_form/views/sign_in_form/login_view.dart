@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:odoo_project/common/helper/double_helper.dart';
 import 'package:odoo_project/common/resource/assets_manager.dart';
 import 'package:odoo_project/common/resource/values_manager.dart';
 import 'package:odoo_project/common/widget/divider_text.dart';
-import 'package:odoo_project/common/helper/double_helper.dart';
-import 'package:odoo_project/modules/presentation/auth/widget/text_field.dart';
+import 'package:odoo_project/application/auth/sign_in_form/views/sign_in_form/widget/text_field.dart';
 
 class LoginView extends StatelessWidget {
   LoginView({super.key});

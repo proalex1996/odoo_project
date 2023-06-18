@@ -1,4 +1,4 @@
-import 'package:either_dart/either.dart';
+import 'package:dartz/dartz.dart';
 import 'package:odoo_project/domain/core/failures.dart';
 
 Either<ValueFailure<String>, String> validateEmailAdress(String input) {

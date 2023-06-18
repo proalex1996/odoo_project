@@ -2,8 +2,8 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:odoo_project/application/auth/sign_in_form/views/sign_in_form/login_view.dart';
 import 'package:odoo_project/common/resource/values_manager.dart';
-import 'package:odoo_project/modules/presentation/auth/login_view.dart';
 import 'package:odoo_project/modules/presentation/home/home_view.dart';
 import 'package:odoo_project/modules/presentation/init/init_view.dart';
 

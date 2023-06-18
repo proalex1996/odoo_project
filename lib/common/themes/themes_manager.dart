@@ -74,6 +74,9 @@ class Themes {
   static OutlinedBorder _getOutlinedButtonBorder(Set<MaterialState> states) {
     return RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(30),
+      side: BorderSide(
+        color: ColorsManager.colorPrimary,
+      ),
     );
   }
 
