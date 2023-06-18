@@ -5,6 +5,5 @@ import 'package:odoo_project/infrastructure/di/di.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initAppModule();
-  // await preCacheImages();
   runApp(const MyApp());
 }

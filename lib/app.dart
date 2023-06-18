@@ -9,8 +9,6 @@ import 'package:odoo_project/infrastructure/di/di.dart';
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
-  static final navigatorKey = GlobalKey<NavigatorState>();
-
   @override
   State<MyApp> createState() => _MyAppState();
 }

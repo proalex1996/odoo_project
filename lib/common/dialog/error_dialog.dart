@@ -6,7 +6,7 @@ import 'package:odoo_project/common/resource/colors_manager.dart';
 import 'package:odoo_project/common/resource/fonts_manager.dart';
 import 'package:odoo_project/common/resource/styles_manager.dart';
 import 'package:odoo_project/common/resource/values_manager.dart';
-import 'package:odoo_project/helper/double_helper.dart';
+import 'package:odoo_project/common/helper/double_helper.dart';
 
 class ErrorDialog extends StatelessWidget {
   final String title;
