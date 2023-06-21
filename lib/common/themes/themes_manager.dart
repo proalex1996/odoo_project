@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:odoo_project/common/resource/colors_manager.dart';
 import 'package:odoo_project/common/resource/fonts_manager.dart';
@@ -138,8 +140,8 @@ class Themes {
 
 extension BuildContextExtensions on BuildContext {
   ThemeData get theme => Theme.of(this);
-
+  MediaQueryData get mediaQuery => MediaQuery.of(this);
   TextTheme get textTheme => theme.textTheme;
-
+  Size get size => mediaQuery.size;
   ColorScheme get colorScheme => theme.colorScheme;
 }

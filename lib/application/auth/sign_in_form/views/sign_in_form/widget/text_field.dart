@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:odoo_project/common/themes/themes_manager.dart';
 
 class TextFieldLogin extends StatelessWidget {
   const TextFieldLogin({
@@ -13,7 +14,7 @@ class TextFieldLogin extends StatelessWidget {
     return TextField(
       onChanged: onChanged,
       decoration: (const InputDecoration())
-          .applyDefaults(Theme.of(context).inputDecorationTheme)
+          .applyDefaults(context.theme.inputDecorationTheme)
           .copyWith(hintText: hintText),
     );
   }

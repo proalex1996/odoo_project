@@ -5,6 +5,7 @@ import 'package:odoo_project/application/auth/sign_in_form/bloc/sign_in_form_blo
 import 'package:odoo_project/common/helper/double_helper.dart';
 import 'package:odoo_project/common/resource/assets_manager.dart';
 import 'package:odoo_project/common/resource/values_manager.dart';
+import 'package:odoo_project/common/themes/themes_manager.dart';
 import 'package:odoo_project/common/widget/divider_text.dart';
 import 'package:odoo_project/application/auth/sign_in_form/views/sign_in_form/widget/text_field.dart';
 import 'package:odoo_project/infrastructure/di/di.dart';
@@ -70,7 +71,7 @@ class SignInForm extends StatelessWidget {
                     SizedBox(height: AppSize.s16.getSize(context)),
                     ElevatedButton(
                       onPressed: () {},
-                      style: Theme.of(context).elevatedButtonTheme.style,
+                      style: context.theme.elevatedButtonTheme.style,
                       child: const Text(
                         'LOGIN',
                       ),
@@ -83,10 +84,9 @@ class SignInForm extends StatelessWidget {
                     SizedBox(height: AppSize.s15.getSize(context)),
                     OutlinedButton(
                       onPressed: () {},
-                      style: Theme.of(context).outlinedButtonTheme.style,
+                      style: context.theme.outlinedButtonTheme.style,
                       child: SvgPicture.asset(
-                        ImageAssets
-                            .googleLogo, // Replace with your own Google logo asset
+                        ImageAssets.googleLogo,
                         height: AppSize.s20.getSize(context),
                       ),
                     ),
